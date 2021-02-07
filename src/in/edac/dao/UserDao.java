@@ -29,9 +29,6 @@ public class UserDao {
 	}
 	
 	
-	
-	
-	
 	public boolean cretateUser(User user) throws Exception {
 		
 		Class.forName(DB_DRIVER);
