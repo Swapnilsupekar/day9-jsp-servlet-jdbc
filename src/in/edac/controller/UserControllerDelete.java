@@ -29,7 +29,8 @@ public class UserControllerDelete extends HttpServlet {
 			dao.deleteUser(user);
 			
 			// request.getRequestDispatcher("success.jsp").forward(request, response);
-			request.getRequestDispatcher("user-read").forward(request, response);
+			// request.getRequestDispatcher("user-read").forward(request, response);
+			response.sendRedirect("/day9/user-read");
 		} catch(Exception e) {
 			e.printStackTrace();
 			
