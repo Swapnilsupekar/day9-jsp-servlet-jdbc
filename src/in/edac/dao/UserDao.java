@@ -29,6 +29,16 @@ public class UserDao {
 	}
 	
 	
+	public void checkConnection1()  {
+		try (Connection con = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);) {
+			
+			System.out.println("Success Try With Resource!!");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
 	public boolean cretateUser(User user) throws Exception {
 		
 		Class.forName(DB_DRIVER);
